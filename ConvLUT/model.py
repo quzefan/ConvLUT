@@ -327,8 +327,8 @@ if __name__ == '__main__':
     model_b = BiasPredictor().to(device)
     LUT_interpolation = Weighted4DLUTInter(LUT_file=LUT_file, tri_index_file=tri_index_file).to(device)
 
-    x = torch.rand((1, 3, 270, 180)).to(device)
-    x_up = torch.rand((32, 3, 1080, 720)).to(device)
+    x = torch.rand((1, 3, 320, 180)).to(device)
+    x_up = torch.rand((32, 3, 1280, 720)).to(device)
 
     model_w.eval()
     model_b.eval()
